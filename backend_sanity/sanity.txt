@@ -1,0 +1,2 @@
+npx sanity manage
+npm run dev
