@@ -8,6 +8,7 @@ import flutter from '../assets/flutter.png';
 import git from '../assets/git.png';
 import graphql from '../assets/graphql.png';
 import html from '../assets/html.png';
+import java from '../assets/java.png';
 import javascript from '../assets/javascript.png';
 import mu5 from '../assets/mu5.png';
 import node from '../assets/node.png';
@@ -36,6 +37,7 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 
 import profile2 from '../assets/profile2.png';
+import profile3 from '../assets/profile3.png';
 import react2 from '../assets/react2.png';
 import python2 from '../assets/python2.png';
 
@@ -50,6 +52,7 @@ export default {
   git,
   graphql,
   html,
+  java,
   javascript,
   mu5,
   node,
@@ -74,6 +77,7 @@ export default {
   skype,
   spotify,
   profile2,
+  profile3,
   react2,
   python2,
 };
