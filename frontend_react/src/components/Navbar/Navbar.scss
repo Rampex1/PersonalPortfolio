@@ -171,3 +171,19 @@
     display: none;
   }
 }
+
+.app__navbar-cv {
+  .cv-button {
+    background-color: #304FFD;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(blue, 10%);
+    }
+  }
+}
