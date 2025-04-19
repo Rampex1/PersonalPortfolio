@@ -147,7 +147,8 @@
   color: var(--gray-color) !important;
   text-align: center !important;
   line-height: 1.5 !important;
-  opacity: 1 !important;
+  pointer-events: none !important; /* Prevent tooltip from capturing mouse events */
+  z-index: 9999 !important; /* Ensure tooltip is above other elements */
 
   @media screen and (min-width: 2000px) {
     font-size: 1.75rem !important;

@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
@@ -15,11 +16,21 @@ const Skills = () => {
     const skillsQuery = '*[_type == "skills"]';
 
     client.fetch(query).then((data) => {
-      setExperiences(data);
+      setExperiences(data.sort((a, b) => b.year - a.year));
     });
 
     client.fetch(skillsQuery).then((data) => {
-      setSkills(data);
+      setSkills(data.sort((a, b) => {
+        const nameA = a.name.toUpperCase();
+        const nameB = b.name.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+        return 0;
+      }));
     });
   }, []);
 
@@ -57,40 +68,40 @@ const Skills = () => {
               </div>
               <motion.div className="app__skills-exp-works">
                 {experience.works.map((work) => (
-                  <>
-                    <motion.div
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ duration: 0.5 }}
-                      className="app__skills-exp-work"
-                      data-tip
-                      data-for={work.name}
-                      key={work.name}
-                    >
-                      <h4 className="bold-text">{work.name}</h4>
-                      <p className="p-text">{work.company}</p>
-                    </motion.div>
-                    <ReactTooltip
-                      id={work.name}
-                      effect="solid"
-                      arrowColor="#fff"
-                      className="skills-tooltip"
-                    >
-                      {work.desc}
-                    </ReactTooltip>
-                  </>
+                  <motion.div
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ duration: 0.5 }}
+                    className="app__skills-exp-work"
+                    data-tooltip-id="skills-tooltip"
+                    data-tooltip-content={work.desc}
+                    key={work.name}
+                  >
+                    <h4 className="bold-text">{work.name}</h4>
+                    <p className="p-text">{work.company}</p>
+                  </motion.div>
                 ))}
               </motion.div>
             </motion.div>
           ))}
         </div>
       </div>
+
+      <ReactTooltip
+        id="skills-tooltip"
+        place="top"
+        variant="dark"
+        arrowColor="#fff"
+        className="skills-tooltip"
+        closeOnEsc={true}
+        clickable={false}
+        delayHide={0}
+      />
     </>
   );
 };
 
 export default AppWrap(
-  MotionWrap(Skills, 'app__skills'), 
-  'skills', 
+  MotionWrap(Skills, 'app__skills'),
+  'skills',
   'app__whitebg'
 );
-
