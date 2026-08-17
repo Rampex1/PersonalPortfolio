@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Tooltip as ReactTooltip } from 'react-tooltip';
-import 'react-tooltip/dist/react-tooltip.css';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
@@ -72,8 +70,6 @@ const Skills = () => {
                     whileInView={{ opacity: [0, 1] }}
                     transition={{ duration: 0.5 }}
                     className="app__skills-exp-work"
-                    data-tooltip-id="skills-tooltip"
-                    data-tooltip-content={work.desc}
                     key={work.name}
                   >
                     <h4 className="bold-text">{work.name}</h4>
@@ -85,17 +81,6 @@ const Skills = () => {
           ))}
         </div>
       </div>
-
-      <ReactTooltip
-        id="skills-tooltip"
-        place="top"
-        variant="dark"
-        arrowColor="#fff"
-        className="skills-tooltip"
-        closeOnEsc={true}
-        clickable={false}
-        delayHide={0}
-      />
     </>
   );
 };
