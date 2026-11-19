@@ -1,20 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap");
 
 :root {
-  --font-base: "DM Sans", sans-serif;
-
-  --primary-color: #edf2f8;
-  --secondary-color: #313bac;
-  --black-color: #030303;
-  --lightGray-color: #e4e4e4;
-  --gray-color: #6b7688;
-  --brown-color: #46364a;
-  --white-color: #ffffff;
+  --bg: #0b1324;
+  --ink: #e2e8f0;
+  --muted: #94a3b8;
+  --faint: #7d8ba1;
+  --rule: #1f2a3d;
+  --accent: #5eead4;
+  --accent-soft: rgba(94, 234, 212, 0.1);
+  --font: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  scroll-behavior: smooth;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 1rem/1.65 var(--font);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
 }
+
+::selection { background: var(--accent); color: var(--bg); }
+a { color: inherit; text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+html { scrollbar-color: #334155 var(--bg); color-scheme: dark; }

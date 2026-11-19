@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-18T12:00:00Z",
+  "title": "Design System: David Zhou Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "accent-teal": {
+        "role": "primary",
+        "displayName": "Signal Teal",
+        "canonical": "#5eead4",
+        "tonalRamp": [
+          "#042f2e",
+          "#115e59",
+          "#0f766e",
+          "#14b8a6",
+          "#2dd4bf",
+          "#5eead4",
+          "#99f6e4",
+          "#ccfbf1"
+        ]
+      },
+      "accent-glaze": {
+        "role": "primary",
+        "displayName": "Teal Glaze",
+        "canonical": "rgba(94, 234, 212, 0.1)",
+        "tonalRamp": [
+          "#0b1324",
+          "#0e1f2e",
+          "#112a37",
+          "#143541",
+          "#17404a",
+          "#1a4b54",
+          "#1d565d",
+          "#206167"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Frost Ink",
+        "canonical": "#e2e8f0",
+        "tonalRamp": [
+          "#1e293b",
+          "#334155",
+          "#475569",
+          "#64748b",
+          "#94a3b8",
+          "#cbd5e1",
+          "#e2e8f0",
+          "#f1f5f9"
+        ]
+      },
+      "slate": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "canonical": "#94a3b8",
+        "tonalRamp": [
+          "#1e2633",
+          "#2e3949",
+          "#465468",
+          "#64748b",
+          "#7d8ba1",
+          "#94a3b8",
+          "#c3ccd8",
+          "#e6eaf0"
+        ]
+      },
+      "faint-slate": {
+        "role": "neutral",
+        "displayName": "Faint Slate",
+        "canonical": "#7d8ba1",
+        "tonalRamp": [
+          "#1a212c",
+          "#2a3442",
+          "#3f4b5c",
+          "#56647a",
+          "#7d8ba1",
+          "#9aa6b8",
+          "#c0c8d4",
+          "#e4e8ee"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#1f2a3d",
+        "tonalRamp": [
+          "#0b1324",
+          "#141e31",
+          "#1f2a3d",
+          "#2b3850",
+          "#3a4964",
+          "#566580",
+          "#8391a8",
+          "#c2cad6"
+        ]
+      },
+      "night-navy": {
+        "role": "neutral",
+        "displayName": "Night Navy",
+        "canonical": "#0b1324",
+        "tonalRamp": [
+          "#050913",
+          "#0b1324",
+          "#131d33",
+          "#1c2843",
+          "#2a3858",
+          "#44547a",
+          "#7584a3",
+          "#b6c0d3"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name, once, in the sticky left column."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Role line under the name."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Experience role and company; project titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "About paragraphs and pitch, capped near 65ch."
+      },
+      "body-sm": {
+        "displayName": "Body small",
+        "purpose": "Experience bullets and project descriptions."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Dates, Source links, footer."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase tracked nav labels and mobile sticky section bars only."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-expo-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Nav line extension (0.35s) and arrow nudges (0.25s)."
+      },
+      {
+        "name": "color-fade",
+        "value": "0.2s",
+        "purpose": "Color, background and border-color hover transitions."
+      },
+      {
+        "name": "sibling-dim",
+        "value": "opacity 0.25s to 0.5",
+        "purpose": "Experience rows dim their siblings on hover (hover-capable devices only)."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "row-rail",
+        "value": "640px"
+      },
+      {
+        "name": "two-column",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Resume Button",
+      "kind": "button",
+      "refersTo": "button-resume",
+      "description": "The single outlined button; always one click from the resume.",
+      "html": "<a class=\"ds-btn-resume\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><polyline points=\"14 2 14 8 20 8\"/><line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"/><line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"/></svg> Resume</a>",
+      "css": ".ds-btn-resume { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 1rem; border-radius: 6px; border: 1px solid var(--accent, #5eead4); background: transparent; color: var(--accent, #5eead4); font: 500 0.875rem/1.65 var(--font, 'Hanken Grotesk', sans-serif); text-decoration: none; transition: background 0.2s; } .ds-btn-resume:hover { background: var(--accent-soft, rgba(94, 234, 212, 0.1)); color: var(--accent, #5eead4); } .ds-btn-resume:focus-visible { outline: 2px solid var(--accent, #5eead4); outline-offset: 3px; }"
+    },
+    {
+      "name": "Arrow Link",
+      "kind": "custom",
+      "description": "Section-closing text link with hairline underline and up-right arrow.",
+      "html": "<a class=\"ds-arrow-link\" href=\"#\">View full resume <svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\"/><polyline points=\"7 7 17 7 17 17\"/></svg></a>",
+      "css": ".ds-arrow-link { display: inline-flex; align-items: center; gap: 0.35rem; font: 600 1rem/1.65 var(--font, 'Hanken Grotesk', sans-serif); color: var(--ink, #e2e8f0); text-decoration: none; border-bottom: 1px solid var(--rule, #1f2a3d); transition: border-color 0.2s, color 0.2s; } .ds-arrow-link svg { transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-arrow-link:hover { color: var(--accent, #5eead4); border-color: var(--accent, #5eead4); } .ds-arrow-link:hover svg { transform: translate(2px, -2px); } .ds-arrow-link:focus-visible { outline: 2px solid var(--accent, #5eead4); outline-offset: 3px; }"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Static technology pill under an experience row.",
+      "html": "<ul class=\"ds-tags\"><li>Go</li><li>gRPC</li><li>Distributed systems</li></ul>",
+      "css": ".ds-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 0; } .ds-tags li { padding: 0.2rem 0.65rem; border-radius: 999px; background: var(--accent-soft, rgba(94, 234, 212, 0.1)); color: var(--accent, #5eead4); font: 500 0.75rem/1.65 var(--font, 'Hanken Grotesk', sans-serif); }"
+    },
+    {
+      "name": "Section Nav",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Desktop scroll-spy nav; the line extends and turns teal on the active section.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"active\">About</a><a href=\"#\">Experience</a><a href=\"#\">Projects</a></nav>",
+      "css": ".ds-nav { display: flex; flex-direction: column; } .ds-nav a { display: flex; align-items: center; gap: 1rem; padding: 0.6rem 0; text-decoration: none; font: 600 0.75rem/1.65 var(--font, 'Hanken Grotesk', sans-serif); letter-spacing: 0.12em; text-transform: uppercase; color: var(--faint, #7d8ba1); transition: color 0.2s; } .ds-nav a::before { content: ''; height: 1px; width: 2rem; background: currentColor; transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav a:hover, .ds-nav a.active { color: var(--ink, #e2e8f0); } .ds-nav a:hover::before, .ds-nav a.active::before { width: 4rem; } .ds-nav a.active::before { background: var(--accent, #5eead4); } .ds-nav a:focus-visible { outline: 2px solid var(--accent, #5eead4); outline-offset: 3px; }"
+    },
+    {
+      "name": "Experience Row",
+      "kind": "custom",
+      "description": "Date rail beside role, bullets with ink-bold metrics, and tags; siblings dim on hover.",
+      "html": "<ol class=\"ds-exp\"><li class=\"ds-exp-item\"><p class=\"ds-exp-dates\">May – Aug 2025</p><div><h3>SWE Intern <span class=\"ds-at\">·</span> StreamingFast</h3><ul class=\"ds-bullets\"><li>Optimized firehose tracing, reducing streaming latency by <strong>40%</strong></li></ul></div></li><li class=\"ds-exp-item\"><p class=\"ds-exp-dates\">May – Aug 2024</p><div><h3>Research Intern <span class=\"ds-at\">·</span> NRC</h3><ul class=\"ds-bullets\"><li>Enabled <strong>4x</strong> faster deployment cycles</li></ul></div></li></ol>",
+      "css": ".ds-exp { list-style: none; padding: 0; margin: 0; font: 400 1rem/1.65 var(--font, 'Hanken Grotesk', sans-serif); font-variant-numeric: tabular-nums; color: var(--ink, #e2e8f0); } .ds-exp:hover .ds-exp-item:not(:hover) { opacity: 0.5; } .ds-exp-item { display: grid; grid-template-columns: 8.5rem 1fr; gap: 0.25rem 2rem; padding: 1.5rem 0; border-top: 1px solid var(--rule, #1f2a3d); transition: opacity 0.25s; } .ds-exp-item:first-child { border-top: 0; padding-top: 0; } .ds-exp-dates { margin: 0; font-size: 0.8125rem; color: var(--faint, #7d8ba1); padding-top: 0.15rem; } .ds-exp-item h3 { margin: 0; font-size: 1rem; font-weight: 600; line-height: 1.4; } .ds-at { color: var(--faint, #7d8ba1); } .ds-bullets { margin: 0.75rem 0 0; padding-left: 1.1rem; color: var(--muted, #94a3b8); font-size: 0.9375rem; } .ds-bullets li::marker { color: var(--faint, #7d8ba1); } .ds-bullets strong { color: var(--ink, #e2e8f0); font-weight: 600; }"
+    },
+    {
+      "name": "Project Row",
+      "kind": "custom",
+      "description": "Thumbnail rail beside a linked title with a nudging arrow and slate description.",
+      "html": "<div class=\"ds-project\"><div class=\"ds-thumb\"></div><div><h3><a href=\"#\">Polymarket Bot <svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\"/><polyline points=\"7 7 17 7 17 17\"/></svg></a></h3><p>Autonomous trader: <strong>15%</strong> realized profit.</p></div></div>",
+      "css": ".ds-project { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem 1.5rem; font: 400 1rem/1.65 var(--font, 'Hanken Grotesk', sans-serif); color: var(--ink, #e2e8f0); } .ds-thumb { width: 7.5rem; height: 5rem; border-radius: 6px; border: 1px solid var(--rule, #1f2a3d); background: var(--rule, #1f2a3d); } .ds-project h3 { margin: 0; font-size: 1rem; font-weight: 600; line-height: 1.4; } .ds-project h3 a { color: inherit; text-decoration: none; } .ds-project h3 svg { vertical-align: -0.1em; color: var(--faint, #7d8ba1); transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s; } .ds-project h3 a:hover { color: var(--accent, #5eead4); } .ds-project h3 a:hover svg { color: var(--accent, #5eead4); transform: translate(2px, -2px); } .ds-project h3 a:focus-visible { outline: 2px solid var(--accent, #5eead4); outline-offset: 3px; } .ds-project p { margin: 0.25rem 0 0; color: var(--muted, #94a3b8); font-size: 0.9375rem; } .ds-project strong { color: var(--ink, #e2e8f0); font-weight: 600; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Annotated Resume",
+    "overview": "The page is a resume given room to breathe: a deep navy sheet, one pale ink, one teal, and hairlines where a printed CV would have rules. It takes the category-standard engineer-portfolio layout (sticky identity column on the left, scrolling evidence on the right) and refuses to decorate it. Every visual decision exists to move a recruiter's eye from name to measured result in under a minute.\n\nDensity is moderate and list-like. Content sits in rows separated by 1px hairlines, never in cards. The only color that is not a navy or slate is the teal accent, and it appears on interaction (links, hover, the active nav line) and on the technology pills. Numbers are the loudest thing in the body copy: tabular numerals everywhere, and measured results set in ink at weight 600 against slate prose.\n\nMotion is small and functional: the nav line extends, an arrow nudges up-right, sibling rows dim. Nothing animates on load.",
+    "keyCharacteristics": [
+      "Dark-only navy ground, single pale ink, single teal accent.",
+      "Two columns on desktop (5fr / 7fr), left column sticky at full viewport height.",
+      "Hairline-separated rows; no cards, no shadows.",
+      "Tabular numerals globally; metrics bolded in ink inside slate prose.",
+      "One typeface (Hanken Grotesk) across every role."
+    ],
+    "rules": [
+      {
+        "name": "The One Teal Rule",
+        "body": "Signal Teal is the only hue. It marks interaction, the resume outline, and technology tags; it never fills a section, a background band, or a heading.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink-for-Proof Rule",
+        "body": "In running prose, ink is reserved for measured results (percentages, multipliers, throughput, money, counts). Prose stays slate so the numbers surface on a skim.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "font-variant-numeric: tabular-nums is set on body and inherited everywhere; dates and metrics must align and never jitter.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Every role uses Hanken Grotesk. Do not introduce a second display or mono face.",
+        "section": "typography"
+      },
+      {
+        "name": "The Rail Rule",
+        "body": "Metadata (dates, thumbnails) lives in a fixed-width left rail of each row; titles and prose always start on the same vertical line.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Sheet Rule",
+        "body": "Nothing lifts off the page. Separation is a 1px hairline or whitespace, never a shadow or a filled card.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep Signal Teal to interaction states, focus, selection, the resume outline, and tags.",
+      "Do separate list items with a 1px hairline and 1.5rem padding, first row unruled.",
+      "Do bold measured results in ink inside slate prose.",
+      "Do use tabular numerals for any date or metric.",
+      "Do keep motion to color shifts, line extension, 2px arrow nudges, and sibling dimming; respect reduced motion."
+    ],
+    "donts": [
+      "Don't put content in cards or add box-shadows.",
+      "Don't introduce a second accent hue or a second typeface.",
+      "Don't set a tracked uppercase label above a heading as a kicker; uppercase labels are for the nav and the mobile section bars only.",
+      "Don't animate content in on load or on scroll."
+    ]
+  }
+}
