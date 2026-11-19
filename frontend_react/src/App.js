@@ -75,7 +75,7 @@ const EXPERIENCE = [
     logo: mcgillLogo,
     role: 'Bachelor of Software Engineering Co-op',
     dates: '2023 – Aug 2027',
-    bullets: ['CGPA 3.71 / 4.0'],
+    bullets: [],
     tags: [],
   },
 ];
