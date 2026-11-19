@@ -13,7 +13,7 @@ Recruiters and hiring managers filling new-grad software engineering roles (back
 Personal portfolio for David Zhou, Software Engineering Co-op at McGill (graduating August 2027). Success means a visitor quickly understands the level of work David has shipped and contacts him or opens the resume.
 
 ## Positioning
-Incoming Software Engineer Intern at Stripe (Jan–Apr 2027), after three infrastructure internships with measured impact (AWS IAM Identity Center custom domains, StreamingFast Go streaming infra, NRC medical computer vision) plus a self-directed live trading bot. Also a competitive distance runner: the same person who ran a 1h19 half marathon is optimising latency numbers.
+Incoming Software Engineer Intern at Stripe (Jan–May 2027), after three infrastructure internships with measured impact (AWS IAM Identity Center custom domains, StreamingFast Go streaming infra, NRC medical computer vision) plus a self-directed live trading bot. Also a competitive distance runner: the same person who ran a 1h19 half marathon is optimising latency numbers.
 
 ## Operating Context
 Linked from resume PDF, LinkedIn and GitHub (github.com/Rampex1). Viewed on desktop during screening and on phones between meetings. Deployed on Netlify (david-zhou-portfolio.netlify.app).
@@ -27,7 +27,7 @@ Linked from resume PDF, LinkedIn and GitHub (github.com/Rampex1). Viewed on desk
 Name: David Zhou. Contact: david.zhou.0110@gmail.com, github.com/Rampex1, linkedin.com/in/david-zhou1/.
 
 ## Evidence on Hand
-- Resume (`frontend_react/src/assets/resume.pdf`, updated 2026-11-18): incoming Stripe Software Engineer Intern (Jan–Apr 2027), AWS SDE Intern (May–Aug 2026), StreamingFast SWE Intern (May–Aug 2025), National Research Council Research Assistant Intern (May–Aug 2024), each with quantified impact bullets. McGill CGPA 3.71.
+- Resume (`frontend_react/src/assets/resume.pdf`, updated 2026-11-18): incoming Stripe Software Engineer Intern (Jan–May 2027), AWS SDE Intern (May–Aug 2026), StreamingFast SWE Intern (May–Aug 2025), National Research Council Research Assistant Intern (May–Aug 2024), each with quantified impact bullets. McGill CGPA 3.71.
 - Polymarket trading bot: 15% realized profit, 500,000+ daily trades screened.
 - Athletics: varsity athlete; bronze medal at Jeux du Québec; 37th overall at the 2026 Canadian 5K Championships; half marathon 1h19.
 - Featured project: Polymarket Bot only; the rest live on GitHub (github.com/Rampex1).

@@ -28,7 +28,7 @@ const EXPERIENCE = [
     org: 'Stripe',
     logo: stripeLogo,
     role: 'Incoming Software Engineer Intern',
-    dates: 'Jan – Apr 2027',
+    dates: 'Jan – May 2027',
     bullets: [],
     tags: [],
   },
