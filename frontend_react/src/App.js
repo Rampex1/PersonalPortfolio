@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FiArrowUpRight, FiGithub, FiLinkedin, FiMail, FiFileText } from 'react-icons/fi';
 
 import resume from './assets/resume.pdf';
+import cleartillImg from './assets/cleartill.png';
 import polymarketImg from './assets/polymarket.png';
 import stripeLogo from './assets/logos/stripe.png';
 import awsLogo from './assets/logos/aws.png';
@@ -81,6 +82,14 @@ const EXPERIENCE = [
 ];
 
 const PROJECTS = [
+  {
+    title: 'Cleartill',
+    description:
+      'Stripe-style payments platform, live: card API, hosted checkout, merchant dashboard and Python SDK on a double-entry ledger that Postgres keeps balanced, with concurrency-safe refunds and payouts and 1,087 tests.',
+    href: 'https://cleartill.onrender.com',
+    source: 'https://github.com/Rampex1/cleartill',
+    img: cleartillImg,
+  },
   {
     title: 'Polymarket Bot',
     description:
@@ -163,6 +172,11 @@ const Projects = () => (
             </a>
           </h3>
           <p>{emphasize(p.description)}</p>
+          {p.source && (
+            <a className="project-source" href={p.source} target="_blank" rel="noreferrer">
+              <FiGithub aria-hidden="true" /> Source
+            </a>
+          )}
         </div>
       </li>
     ))}

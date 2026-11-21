@@ -30,7 +30,7 @@ Name: David Zhou. Contact: david.zhou.0110@gmail.com, github.com/Rampex1, linked
 - Resume (`frontend_react/src/assets/resume.pdf`, updated 2026-11-18): incoming Stripe Software Engineer Intern (Jan–May 2027), AWS SDE Intern (May–Aug 2026), StreamingFast SWE Intern (May–Aug 2025), National Research Council Research Assistant Intern (May–Aug 2024), each with quantified impact bullets. McGill CGPA 3.71.
 - Polymarket trading bot: 15% realized profit, 500,000+ daily trades screened.
 - Athletics: varsity athlete; bronze medal at Jeux du Québec; 37th overall at the 2026 Canadian 5K Championships; half marathon 1h19.
-- Featured project: Polymarket Bot only; the rest live on GitHub (github.com/Rampex1).
+- Featured projects: Cleartill (live at cleartill.onrender.com, source github.com/Rampex1/cleartill: a Stripe-style payments platform with a double-entry ledger, 1,087 tests, one-click demo accounts) and the Polymarket Bot; the rest live on GitHub (github.com/Rampex1).
 - No testimonials, no press. Do not invent any.
 
 ## Product Principles

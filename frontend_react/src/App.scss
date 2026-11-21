@@ -310,6 +310,18 @@ h3 {
 // Projects
 .projects { list-style: none; }
 
+.project-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  color: var(--faint);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  &:hover { color: var(--accent); }
+}
+
 .project {
   display: grid;
   grid-template-columns: 1fr;
