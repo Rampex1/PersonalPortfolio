@@ -4,6 +4,7 @@ import { FiArrowUpRight, FiGithub, FiLinkedin, FiMail, FiFileText } from 'react-
 import resume from './assets/resume.pdf';
 import cleartillImg from './assets/cleartill.png';
 import polymarketImg from './assets/polymarket.png';
+import arucoPaperImg from './assets/aruco-paper.png';
 import stripeLogo from './assets/logos/stripe.png';
 import awsLogo from './assets/logos/aws.png';
 import streamingfastLogo from './assets/logos/streamingfast.png';
@@ -11,7 +12,7 @@ import nrcLogo from './assets/logos/nrc.jpg';
 import mcgillLogo from './assets/logos/mcgill.svg';
 import './App.scss';
 
-const SECTIONS = ['about', 'experience', 'projects'];
+const SECTIONS = ['about', 'experience', 'projects', 'publications'];
 
 const ABOUT =
   'Making code run isn’t the only thing I’m good at - I can also run a half marathon under 1h20. Whether it’s spending my days out on the trail or my nights in front of a computer, there’s one thing I’m sure of: I am on the right track.';
@@ -99,6 +100,18 @@ const PROJECTS = [
   },
 ];
 
+const PUBLICATIONS = [
+  {
+    title: 'Determining the 3D Spatial Arrangement of ArUco Markers Using a Multi-Camera Tracking System',
+    authors: ['David Zhou', 'Andras Lasso', 'Keiran Barr', 'Tamas Ungi', 'Gabor Fichtinger', 'Thomas Vaughan'],
+    venue: 'National Research Council Canada and Queen\u2019s University · Aug 2024',
+    description:
+      'Multi-camera OpenCV system that maps hand-placed ArUco marker constellations for surgical tracking, with RMSE under 0.03 mm in simulation and repeatability within 1 mm on physical boards.',
+    href: 'https://drive.google.com/file/d/1Ng8jDJ9zJ4P-GBBEIPn6u7euVDYeIN4f/view',
+    img: arucoPaperImg,
+  },
+];
+
 // Bold the measured results so a skim lands on them.
 const NUM = /(?<![\w.])(~?\$?\d[\d,]*(?:\.\d+)?(?:%|x|\s?MB\/s|\s?mm|\s?min|s)?)(?!\w)/g;
 const emphasize = (text) =>
@@ -113,11 +126,12 @@ const LINKS = [
 const useActiveSection = () => {
   const [active, setActive] = useState(SECTIONS[0]);
   useEffect(() => {
-    // Active = last section whose top has passed 40% of the viewport.
+    // Active = last section whose top has passed 40% of the viewport (the last one at page bottom).
     const onScroll = () => {
       const line = window.innerHeight * 0.4;
       const passed = SECTIONS.filter((id) => document.getElementById(id)?.getBoundingClientRect().top <= line);
-      setActive(passed[passed.length - 1] || SECTIONS[0]);
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      setActive(atBottom ? SECTIONS[SECTIONS.length - 1] : passed[passed.length - 1] || SECTIONS[0]);
     };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -177,6 +191,33 @@ const Projects = () => (
               <FiGithub aria-hidden="true" /> Source
             </a>
           )}
+        </div>
+      </li>
+    ))}
+  </ul>
+);
+
+const Publications = () => (
+  <ul className="projects">
+    {PUBLICATIONS.map((p) => (
+      <li className="project" key={p.title}>
+        <img src={p.img} alt="" loading="lazy" width="120" height="80" />
+        <div>
+          <h3>
+            <a href={p.href} target="_blank" rel="noreferrer">
+              {p.title} <FiArrowUpRight aria-hidden="true" />
+            </a>
+          </h3>
+          <p className="pub-authors">
+            {p.authors.map((a, i) => (
+              <React.Fragment key={a}>
+                {i > 0 && ', '}
+                {a === 'David Zhou' ? <strong>{a}</strong> : a}
+              </React.Fragment>
+            ))}
+          </p>
+          <p className="pub-venue">{p.venue}</p>
+          <p>{emphasize(p.description)}</p>
         </div>
       </li>
     ))}
@@ -254,6 +295,11 @@ const App = () => {
           <a className="arrow-link" href="https://github.com/Rampex1?tab=repositories" target="_blank" rel="noreferrer">
             All projects on GitHub <FiArrowUpRight aria-hidden="true" />
           </a>
+        </section>
+
+        <section id="publications" aria-label="Publications">
+          <h2>Publications</h2>
+          <Publications />
         </section>
       </main>
     </div>
