@@ -372,3 +372,11 @@ h3 {
   }
 }
 
+
+.pub-authors,
+.pub-venue {
+  margin-bottom: 0.35rem;
+  color: var(--faint);
+  font-size: 0.875rem;
+  strong { color: var(--ink); font-weight: 600; }
+}
