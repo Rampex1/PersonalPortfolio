@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.9c61ba46.css",
-    "main.js": "/static/js/main.0a8bc42e.js",
+    "main.js": "/static/js/main.da9c844e.js",
     "static/media/resume.pdf": "/static/media/resume.ca1307fb628165048c9d.pdf",
     "static/media/mcgill.svg": "/static/media/mcgill.6ad4b263ab3cbd28eca212435b528b96.svg",
     "static/media/streamingfast.png": "/static/media/streamingfast.de2a9b7c4d19195ec27e.png",
     "static/media/polymarket.png": "/static/media/polymarket.ed5a2ac846fb94c3687e.png",
     "index.html": "/index.html",
     "main.9c61ba46.css.map": "/static/css/main.9c61ba46.css.map",
-    "main.0a8bc42e.js.map": "/static/js/main.0a8bc42e.js.map"
+    "main.da9c844e.js.map": "/static/js/main.da9c844e.js.map"
   },
   "entrypoints": [
     "static/css/main.9c61ba46.css",
-    "static/js/main.0a8bc42e.js"
+    "static/js/main.da9c844e.js"
   ]
 }

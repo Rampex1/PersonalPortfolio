@@ -85,7 +85,7 @@ const PROJECTS = [
   {
     title: 'Cleartill',
     description:
-      'Stripe-style payments platform, live: card API, hosted checkout, merchant dashboard and Python SDK on a double-entry ledger that Postgres keeps balanced, with concurrency-safe refunds and payouts and 1,087 tests.',
+      'Payments platform, live: card API, hosted checkout, merchant dashboard and Python SDK on a double-entry ledger that Postgres keeps balanced, with concurrency-safe refunds and payouts and 1,087 tests.',
     href: 'https://cleartill.onrender.com',
     source: 'https://github.com/Rampex1/cleartill',
     img: cleartillImg,
