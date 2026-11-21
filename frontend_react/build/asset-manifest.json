@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.8b63b2f7.css",
-    "main.js": "/static/js/main.02e44ca6.js",
+    "main.css": "/static/css/main.9c61ba46.css",
+    "main.js": "/static/js/main.788e26cb.js",
     "static/media/resume.pdf": "/static/media/resume.ca1307fb628165048c9d.pdf",
     "static/media/mcgill.svg": "/static/media/mcgill.6ad4b263ab3cbd28eca212435b528b96.svg",
     "static/media/streamingfast.png": "/static/media/streamingfast.de2a9b7c4d19195ec27e.png",
+    "static/media/cleartill.png": "/static/media/cleartill.ec1d464a1a50de598488.png",
     "static/media/polymarket.png": "/static/media/polymarket.ed5a2ac846fb94c3687e.png",
     "index.html": "/index.html",
-    "main.8b63b2f7.css.map": "/static/css/main.8b63b2f7.css.map",
-    "main.02e44ca6.js.map": "/static/js/main.02e44ca6.js.map"
+    "main.9c61ba46.css.map": "/static/css/main.9c61ba46.css.map",
+    "main.788e26cb.js.map": "/static/js/main.788e26cb.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b63b2f7.css",
-    "static/js/main.02e44ca6.js"
+    "static/css/main.9c61ba46.css",
+    "static/js/main.788e26cb.js"
   ]
 }
